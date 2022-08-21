@@ -1,11 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from "react-native";
+import Counter from "./src/components/Counter";
+import CustomTouchPad from "./src/components/CustomTouchPad";
+import Separator from "./src/components/Separator";
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Counter name="First" />
+      <Separator />
+      <Counter name="Second" />
+      <Separator />
+      <CustomTouchPad />
     </View>
   );
 }
@@ -13,8 +19,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
